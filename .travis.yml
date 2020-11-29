@@ -20,12 +20,12 @@ after_success:
   - docker push alexiscl/multi-nginx
   - docker push alexiscl/multi-server
   - docker push alexiscl/multi-worker
-  
+
 deploy: 
   provider: elasticbeanstalk
   region: eu-west-3
-  app: multi-docker
-  env: MultiDocker-env
+  app: Docker-env
+  env: DockerEnv-env
   bucket_name: elasticbeanstalk-eu-west-3-486833496224
   bucket_path: docker-multi
   on:
